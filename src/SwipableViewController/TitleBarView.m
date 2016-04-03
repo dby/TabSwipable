@@ -6,7 +6,6 @@
 //
 
 #import "TitleBarView.h"
-#import "UIColor+Util.h"
 
 @interface TitleBarView ()
 
@@ -27,9 +26,9 @@
         
         [titles enumerateObjectsUsingBlock:^(NSString *title, NSUInteger idx, BOOL *stop) {
             UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-            button.backgroundColor = [UIColor titleBarColor];
+            button.backgroundColor = [UIColor orangeColor];
             button.titleLabel.font = [UIFont systemFontOfSize:15];
-            [button setTitleColor:[UIColor colorWithHex:0x909090] forState:UIControlStateNormal];
+            [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             [button setTitle:title forState:UIControlStateNormal];
             
             button.frame = CGRectMake(buttonWidth * idx, 0, buttonWidth, buttonHeight);
@@ -44,7 +43,7 @@
         self.contentSize = CGSizeMake(frame.size.width, 25);
         self.showsHorizontalScrollIndicator = NO;
         UIButton *firstTitle = _titleButtons[0];
-        [firstTitle setTitleColor:[UIColor colorWithHex:0x009000] forState:UIControlStateNormal];
+        [firstTitle setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         firstTitle.transform = CGAffineTransformMakeScale(1.15, 1.15);
     }
     
@@ -57,10 +56,10 @@
     if (_currentIndex != button.tag) {
         UIButton *preTitle = _titleButtons[_currentIndex];
         
-        [preTitle setTitleColor:[UIColor colorWithHex:0x909090] forState:UIControlStateNormal];
+        [preTitle setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         preTitle.transform = CGAffineTransformIdentity;
         
-        [button setTitleColor:[UIColor colorWithHex:0x009000] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         button.transform = CGAffineTransformMakeScale(1.2, 1.2);
         
         _currentIndex = button.tag;
@@ -71,7 +70,7 @@
 - (void)setTitleButtonsColor
 {
     for (UIButton *button in self.subviews) {
-        button.backgroundColor = [UIColor titleBarColor];
+        button.backgroundColor = [UIColor orangeColor];
     }
 }
 

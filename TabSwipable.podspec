@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint tab_swipable.podspec' to ensure this is a
+#  Be sure to run `pod spec lint TabSwipable.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -17,17 +17,16 @@ Pod::Spec.new do |s|
 
   s.name         = "TabSwipable"
   s.version      = "0.0.1"
-  s.summary      = "实现类似网易新闻客户端主界面的一个简单框架"
+  s.summary      = "Tab + Swipable."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
-                   DESC
+  s.description  = "sys.linux.d@gmail.com"
 
-  s.homepage     = "https://github.com/dby"
+  s.homepage     = "https://github.com/dby/TabSwipable"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -63,8 +62,8 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  # s.platform     = :ios
+  s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -79,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/tab_swipable.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/dby/TabSwipable.git", :tag => "0.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,10 +89,10 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "src/SwipableViewController/*.{h, m}"
-  # s.exclude_files = "Classes/Exclude"
+  s.source_files  = "src", "src/SwipableViewController/*.{h,m}"
+  #s.exclude_files = "Classes/Exclude"
 
-  s.public_header_files = "src/SwipableViewController/*.h"
+  # s.public_header_files = "Classes/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -132,6 +131,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "JSONKit", "~> 1.4"
+  # s.dependency "JSONKit", "~> 1.4"
 
 end

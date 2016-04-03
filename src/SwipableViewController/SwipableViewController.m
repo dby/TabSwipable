@@ -5,10 +5,6 @@
 //
 
 #import "SwipableViewController.h"
-#import "Utils.h"
-//#import "OSCAPI.h"
-//#import "TweetsViewController.h"
-//#import "PostsViewController.h"
 
 @interface SwipableViewController ()  <UIScrollViewDelegate>
 
@@ -57,10 +53,10 @@
             weakTitleBar.currentIndex = index;
             for (UIButton *button in weakTitleBar.titleButtons) {
                 if (button.tag != index) {
-                    [button setTitleColor:[UIColor colorWithHex:0x909090] forState:UIControlStateNormal];
+                    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
                     button.transform = CGAffineTransformIdentity;
                 } else {
-                    [button setTitleColor:[UIColor colorWithHex:0x009000] forState:UIControlStateNormal];
+                    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
                     button.transform = CGAffineTransformMakeScale(1.5, 1.5);
                 }
             }
@@ -101,7 +97,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor themeColor];
+    self.view.backgroundColor = [UIColor colorWithRed:235.0/255 green:235.0/255 blue:243.0/255 alpha:1.0];
 }
 
 

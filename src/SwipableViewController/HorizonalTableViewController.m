@@ -5,7 +5,6 @@
 //
 
 #import "HorizonalTableViewController.h"
-#import "Utils.h"
 
 @interface HorizonalTableViewController ()
 
@@ -41,7 +40,7 @@ static NSString *kHorizonalCellID = @"HorizonalCell";
     self.tableView.transform = CGAffineTransformMakeRotation(-M_PI_2);
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.pagingEnabled = YES;
-    self.tableView.backgroundColor = [UIColor themeColor];
+    self.tableView.backgroundColor = [UIColor colorWithRed:235.0/255 green:235.0/255 blue:243.0/255 alpha:1.0];
     self.tableView.bounces = NO;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kHorizonalCellID];
     
@@ -70,7 +69,7 @@ static NSString *kHorizonalCellID = @"HorizonalCell";
 {
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kHorizonalCellID forIndexPath:indexPath];
     cell.contentView.transform = CGAffineTransformMakeRotation(M_PI_2);
-    cell.contentView.backgroundColor = [UIColor themeColor];
+    cell.contentView.backgroundColor = [UIColor colorWithRed:235.0/255 green:235.0/255 blue:243.0/255 alpha:1.0];
     cell.selectionStyle = UITableViewCellSeparatorStyleNone;
     
     UIViewController *controller = _controllers[indexPath.row];
