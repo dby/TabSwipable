@@ -44,15 +44,6 @@ static NSString *kHorizonalCellID = @"HorizonalCell";
     self.tableView.bounces = NO;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kHorizonalCellID];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dawnAndNightMode:) name:@"dawnAndNight" object:nil];
-}
-
-- (void)dawnAndNightMode:(NSNotification *)center
-{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.tableView reloadData];
-    });
-
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -116,12 +107,6 @@ static NSString *kHorizonalCellID = @"HorizonalCell";
     CGFloat offsetRatio = (NSUInteger)horizonalOffset % (NSUInteger)screenWidth / screenWidth;
     NSUInteger focusIndex = (horizonalOffset + screenWidth / 2) / screenWidth;
     
-    //NSLog(@"horizonalOffset: %f\n", horizonalOffset);
-    //NSLog(@"offsetRatio: %f\n", offsetRatio);
-    //NSLog(@"focusIndex: %lu\n", (unsigned long)focusIndex);
-    //NSLog(@"screenWidth: %f\n", screenWidth);
-
-    
     if (horizonalOffset != focusIndex * screenWidth) {
         NSUInteger animationIndex = horizonalOffset > focusIndex * screenWidth ? focusIndex + 1: focusIndex - 1;
         if (focusIndex > animationIndex) {offsetRatio = 1 - offsetRatio;}
@@ -131,15 +116,14 @@ static NSString *kHorizonalCellID = @"HorizonalCell";
     }
 
     if (didScrollStop) {
-        /*
+        
         [_controllers enumerateObjectsUsingBlock:^(UIViewController *vc, NSUInteger idx, BOOL *stop) {
             if ([vc isKindOfClass:[UITableViewController class]]) {
                 ((UITableViewController *)vc).tableView.scrollsToTop = (idx == focusIndex);
             }
         }];
-         */
-        _currentIndex = focusIndex;
         
+        _currentIndex = focusIndex;
         if (_changeIndex) {_changeIndex(focusIndex);}
     }
 }

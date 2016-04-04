@@ -26,7 +26,7 @@
         
         [titles enumerateObjectsUsingBlock:^(NSString *title, NSUInteger idx, BOOL *stop) {
             UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-            button.backgroundColor = [UIColor orangeColor];
+            button.backgroundColor = [UIColor whiteColor];
             button.titleLabel.font = [UIFont systemFontOfSize:15];
             [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             [button setTitle:title forState:UIControlStateNormal];
@@ -44,19 +44,17 @@
         self.showsHorizontalScrollIndicator = NO;
         UIButton *firstTitle = _titleButtons[0];
         [firstTitle setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        firstTitle.transform = CGAffineTransformMakeScale(1.15, 1.15);
+        firstTitle.transform = CGAffineTransformMakeScale(1.20, 1.20);
     }
     
     return self;
 }
-
 
 - (void)onClick:(UIButton *)button
 {
     if (_currentIndex != button.tag) {
         UIButton *preTitle = _titleButtons[_currentIndex];
         
-        [preTitle setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         preTitle.transform = CGAffineTransformIdentity;
         
         [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
@@ -70,7 +68,7 @@
 - (void)setTitleButtonsColor
 {
     for (UIButton *button in self.subviews) {
-        button.backgroundColor = [UIColor orangeColor];
+        button.backgroundColor = [UIColor clearColor];
     }
 }
 
