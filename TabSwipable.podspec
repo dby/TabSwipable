@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dby/TabSwipable.git", :tag => "0.0.1" , :commit => '6db04636e847a700d13cab709625fb8c13c7cfa1'}
+  s.source       = { :git => "https://github.com/dby/TabSwipable.git", :tag => "0.0.1" , :commit => '1e9e0653bbeb47c10f665c938762d145d682dd36'}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
