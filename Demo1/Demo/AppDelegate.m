@@ -45,11 +45,9 @@
     
     _naviController = [[UINavigationController alloc] initWithRootViewController:viewController];
     self.window.rootViewController = _naviController;
-    [self.window addSubview:_naviController.view];
     
-    [_naviController.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor redColor]];
-    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor purpleColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.window makeKeyAndVisible];
     
     return YES;

@@ -81,6 +81,8 @@
         [item setImage:[UIImage imageNamed:images[idx]]];
         [item setSelectedImage:[UIImage imageNamed:[images[idx] stringByAppendingString:@"-selected"]]];
     }];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor redColor]];
 }
 
 #pragma mark --
