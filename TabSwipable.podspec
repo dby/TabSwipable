@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TabSwipable"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Tab + Swipable."
 
   # This description is used to generate tags and improve search results.
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dby/TabSwipable.git", :tag => "0.0.2" , :commit => '1e9e0653bbeb47c10f665c938762d145d682dd36'}
+  s.source       = { :git => "https://github.com/dby/TabSwipable.git", :tag => "0.0.3" , :commit => '5e548814a117cf997d8d1c6273b13a8e20364dba'}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
