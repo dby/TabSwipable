@@ -16,8 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    [self.view setBackgroundColor:[UIColor purpleColor]];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:self.view.frame];
+    [label setText:@"ViewController4"];
+    label.textAlignment = NSTextAlignmentCenter;
+    [label setFont:[UIFont systemFontOfSize:25]];
+    
+    [self.view addSubview:label];
+    [self.view setBackgroundColor:[UIColor greenColor]];
 }
 
 @end

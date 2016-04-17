@@ -16,7 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:self.view.frame];
+    [label setText:@"ViewController3"];
+    label.textAlignment = NSTextAlignmentCenter;
+    [label setFont:[UIFont systemFontOfSize:25]];
+    
+    [self.view addSubview:label];
     [self.view setBackgroundColor:[UIColor yellowColor]];
 }
 
