@@ -42,7 +42,7 @@ TableView中的每个cell旋转90度：
 ###CocoaPods  
 你可以在 Podfile 中加入下面一行代码来使用Swipable框架。
 ```
-pod 'TabSwipable', '0.0.2'  
+pod 'TabSwipable', '0.0.3'  
 ```
 
 欢迎大家提高pull request，希望大家star；
